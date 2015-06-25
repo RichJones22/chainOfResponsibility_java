@@ -14,6 +14,12 @@ package chainofresponsibility;
 
 
 public class ChainOfResponsibility {
+       
+    static class HomeStatus {
+        public boolean alarmOn = false;
+        public boolean locked = true;
+        public boolean lightsOff = false;
+    }
         
     static abstract class HomeChecker{
         
@@ -75,12 +81,6 @@ public class ChainOfResponsibility {
             
             this.next(home);
         }
-    }
-    
-    static class HomeStatus {
-        public boolean alarmOn = false;
-        public boolean locked = true;
-        public boolean lightsOff = false;
     }
 
     /**
